@@ -1,14 +1,14 @@
-const getData = require('../utils/fetchData');
+const fetchData = require('../utils/fetchData');
 const API = 'https://rickandmortyapi.com/api/character/';
 
-getData(API)
+fetchData(API)
     .then(data => {
         console.log(data.info.count);
-        return getData(`${API}${data.results[0].id}`);
+        return fetchData(`${API}${data.results[0].id}`);
     })
     .then(data => {
         console.log(data.name);
-        return getData(data.origin.url);
+        return fetchData(data.origin.url);
     })
     .then(data => {
         console.log(data.dimension)

@@ -1,6 +1,6 @@
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-const getData = (urlAPI) => {
+const fetchData = (urlAPI) => {
 
     return new Promise((resolve,reject) => {
         const xhttp = new XMLHttpRequest();
@@ -19,4 +19,4 @@ const getData = (urlAPI) => {
     })
 };
 
-module.exports = getData;
+module.exports = fetchData;
